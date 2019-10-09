@@ -11,11 +11,30 @@ Class Names = ['connection', 'claw']
 
 In my case, 'claw' class has 2 instances, 'connection' has 1.
 ## Step by step label my crane dataset via VIA
-To do that, you may think I have to label 2 times to create 2 datasets and train 2 maskRCNN models respectively. Indeed, I have to train 2 models for above 2 kinds of division ways. However, due to the convenience of VIA, I can label these 2 datasets at once.
+Firstly, import pictures, then click the "+" button in below picture's circle 1. Then add "class" section.
+
+Secondly, use polygon labeling tool to label the crawl:
+
+Then next claw instance:
+
+Finally, connection instance:
+
+Save annotation as json format(Don't need to rename!), and copy it to <repo_root_path>/data/balloon/train or val
 
 
 ## Training
-1. Train model for first way: 
+Go into docker container:
 ```c
-cd <repo_root_path>/samples/ballon
+cd <repo_root_path>
+docker run -it -v $(pwd):/maskRCNN -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY waleedka/modern-deep-learning bash
+```
+All commands below are run in docker container:
+```c
+cd maskRCNN/samples/balloon
+sh train.sh
+```
+## Prediction
+```c
+cd maskRCNN/samples/balloon
+sh predict.sh
 ```
