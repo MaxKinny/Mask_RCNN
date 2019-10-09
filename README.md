@@ -3,21 +3,13 @@ Labeling Tool: Suggest to use [VIA 1.0.6](http://www.robots.ox.ac.uk/~vgg/softwa
 
 Runtime：[This docker image](https://hub.docker.com/r/waleedka/modern-deep-learning/).
 ## Introduction: 
-I want to divide a crane into different parts. There are 2 ways to divide it. 
+I want to divide a crane into different parts. 
 
-**First way:**
+The parts' division:
 
 Class Names = ['connection', 'claw']
 
-In this case, 'claw' class has 2 instances, 'connection' has 1.
-
-**Second way:**
-
-Class Names = ['fixedPart', 'moveablePart']
-
-In this case, each part only have one instance.
-
-
+In my case, 'claw' class has 2 instances, 'connection' has 1.
 ## Step by step label my crane dataset via VIA
 To do that, you may think I have to label 2 times to create 2 datasets and train 2 maskRCNN models respectively. Indeed, I have to train 2 models for above 2 kinds of division ways. However, due to the convenience of VIA, I can label these 2 datasets at once.
 
