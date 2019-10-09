@@ -22,4 +22,6 @@ To do that, you may think I have to label 2 times to create 2 datasets and train
 
 ## Training
 1. Train model for first way: 
+```c
 cd <repo_root_path>/samples/ballon
+```
