@@ -1,5 +1,5 @@
 # Training on Your Own Dataset Step by Step
-Labeling Tool: Best to use [VIA 1.0.6](http://www.robots.ox.ac.uk/~vgg/software/via/via-1.0.6.html).
+Labeling Tool: Suggest to use [VIA 1.0.6](http://www.robots.ox.ac.uk/~vgg/software/via/via-1.0.6.html).
 ## Introduction: 
 I want to divide a crane into different parts. There are 2 ways to divide it. 
 
