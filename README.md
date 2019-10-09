@@ -34,6 +34,7 @@ cd maskRCNN/samples/balloon
 sh train.sh
 ```
 ## Prediction
+All commands below are run in docker container:
 ```c
 cd maskRCNN/samples/balloon
 sh predict.sh
